@@ -1,0 +1,25 @@
+<?php
+
+trait Calculator{
+	public function sum()
+	{
+		echo 7+5;
+	}
+}
+class Book
+{
+	function b1();
+	{
+		echo 'b1';
+	}
+}
+//multiple level
+//For trait, not necessary in extends book,give use calculator
+class EnglishBook extends Book{
+       use Calculator;
+}
+//create object
+//$obBookClass  = new Book();
+
+$obEnglishBookClass = new EnglishBook();
+$obEnglishBookClass->sum();
